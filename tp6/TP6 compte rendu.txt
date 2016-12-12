@@ -1,0 +1,5 @@
+Exercice 1
+
+1) Dans l'article de Hanneman et Kiczales, l'attribut perSubjectObservers est initialisé avec une WeakHashMap dont les valeur seront des LinkedList. Justifiez ces deux choix.
+
+Une weakHashMap est une HashMap dont les entrées sont automatique supprimées quand la clés n'est plus utilisé. Ceci est utilisé pour éviter la persistance d'objet, non utilisé, dans la mémoire Java. La linkedList est utilisé car elle est plus performante pour parcourir les donnèes, de plus les ajouts se font en temps constants (à l'inverse d'une ArrayList).

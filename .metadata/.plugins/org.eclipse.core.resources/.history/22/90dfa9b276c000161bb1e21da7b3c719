@@ -1,0 +1,18 @@
+package fiche6.controller;
+
+import fiche6.util.AbstractObserver;
+import fiche6.util.Observer;
+import fiche6.util.Subject;
+import fiche6.util.pointcut;
+
+public aspect ColorObserver extends AbstractObserver<Subject, Observer>{
+
+	public pointcut subjectChange(Subject s); 
+	
+	@Override
+	protected void updateObserver(Subject s, Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

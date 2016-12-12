@@ -1,0 +1,5 @@
+package fiche6.util;
+
+public aspect AbstractObserver<S, T> extends ObserverProtocol<Subject, Observer> {
+
+}

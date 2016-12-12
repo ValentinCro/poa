@@ -1,0 +1,10 @@
+package fiche6.util;
+
+public abstract aspect AbstractObserver<S, T> extends ObserverProtocol<Subject, Observer> {
+
+	abstract pointcut subjectChange(Subject s); 
+	
+	after(Subject s) : subjectChange(s) {
+		notifyObserversFor(s);
+	}
+}

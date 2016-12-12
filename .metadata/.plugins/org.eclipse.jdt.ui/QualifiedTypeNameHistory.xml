@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.WeakHashMap"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="fiche6.util.ObserverProtocol"/>
+<fullyQualifiedTypeName name="java.lang.AbstractMethodError"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.AbstractOwnableSynchronizer"/>
+<fullyQualifiedTypeName name="fiche6.domain.StdRainbowModel"/>
+<fullyQualifiedTypeName name="fiche6.util.AbstractObserver"/>
+<fullyQualifiedTypeName name="fiche6.ihm.WJFrame"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="fiche6.controller.TextColorObserver"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="fiche6.util.Subject"/>
+<fullyQualifiedTypeName name="fiche6.orig.Rainbow"/>
+<fullyQualifiedTypeName name="fiche6.ihm.Rainbow"/>
+<fullyQualifiedTypeName name="fiche6.controller.ColorObserver"/>
+<fullyQualifiedTypeName name="fiche6.util.SwingWrappers.WJFrame"/>
+<fullyQualifiedTypeName name="fiche6.util.SwingWrappers.WJTextField"/>
+<fullyQualifiedTypeName name="fiche6.util.Observer"/>
+<fullyQualifiedTypeName name="fiche6.domain.RainbowModel"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+</qualifiedTypeNameHistroy>

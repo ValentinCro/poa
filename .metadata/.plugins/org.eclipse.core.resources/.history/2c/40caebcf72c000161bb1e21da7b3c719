@@ -1,0 +1,13 @@
+package fiche6.util;
+
+abstract aspect AbstractObserver<S, T> extends ObserverProtocol<Subject, Observer> {
+
+	abstract pointcut subjectChange(); 
+	
+	@Override
+	protected void updateObserver(Subject s, Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

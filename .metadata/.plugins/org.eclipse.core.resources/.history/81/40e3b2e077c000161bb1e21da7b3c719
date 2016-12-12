@@ -1,0 +1,10 @@
+package fiche6.util;
+
+public abstract aspect AbstractObserver<S, T> extends ObserverProtocol<Subject, Observer> {
+
+	public abstract pointcut subjectChange(Subject s) : call(void fiche6.domain.StdRainbowModel.changeColor(..)); 
+	
+	after(Subject s) : subjectChange(s) {
+		notifyObserversFor(s);
+	}
+}

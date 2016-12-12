@@ -1,0 +1,39 @@
+package fiche6.controller;
+
+import javax.swing.JFrame;
+
+import fiche6.domain.RainbowModel;
+import fiche6.domain.StdRainbowModel;
+import fiche6.util.Subject;
+import fiche6.util.SwingWrappers.WJFrame;
+import fiche6.util.SwingWrappers.WJTextField;
+
+public aspect RainbowConfigurator {
+
+	declare parents : fiche6.orig.RainbowModel extends fiche6.util.Subject;
+	declare parents : fiche6.util.SwingWrappers.WJFrame extends fiche6.util.Observer;
+	declare parents : fiche6.util.SwingWrappers.WJTextField extends fiche6.util.Observer;
+
+	pointcut constructorRainbowCalled(): call(fiche6.domain.StdRainbowModel.new(..));
+	
+	RainbowModel[] models;
+
+	private void createModels() {
+		models = new StdRainbowModel[2];
+		for (int i = 0; i < models.length; i++) {
+			models[i] = new StdRainbowModel();
+		}
+		createControllers();
+	}
+	
+	after() : constructorRainbowCalled() {
+		createModels();
+	}
+	
+	private void createControllers() {
+		for (int i = 0; i < models.length; i++) {
+			ColorObserver.aspectOf().addObserver((Subject) models[i], (WJFrame) new JFrame());
+			TextColorObserver.aspectOf().addObserver((Subject) models[i], (WJTextField) new WJTextField() );
+		}
+	}
+}

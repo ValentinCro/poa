@@ -1,0 +1,19 @@
+package fiche6.controller;
+
+import fiche6.domain.RainbowModel;
+import fiche6.util.AbstractObserver;
+import fiche6.util.Observer;
+import fiche6.util.Subject;
+import fiche6.util.SwingWrappers.WJFrame;
+
+public aspect ColorObserver extends AbstractObserver<RainbowModel, WJFrame>{
+
+	public pointcut subjectChange(RainbowModel s) : this(s) && call(void fiche6.domain.StdRainbowModel.changeColor(..)); 
+	
+	@Override
+	protected void updateObserver(Subject s, Observer o) {
+		// TODO Auto-generated method stub
+		((WJFrame) o).setBackground(((RainbowModel) s).getColor());
+	}
+
+}
